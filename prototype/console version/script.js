@@ -1,30 +1,23 @@
 var randomNumber = Math.floor(Math.random() * 100);
 
-var userInput = prompt("deviner en un nombre entre 0 et 100:");
-var attempts = 9;
-var winMessage = "Félicitations, vous avez gagné après " + attempts + "tentatives";
+var userInput = prompt("deviner en un nombre entre 1 et 100:");
+var winMessage = "Félicitations, vous avez gagné après " ;
 var lostMessage = "C'est raté !!";
 
 var itIsSmall = "C'est plus petit que " + userInput + ", essayez plus"
 var itIsBigger = "C'est plus grand que " + userInput + ", essayez plus"
+var reuslt;
 
 function isCorrect() {
-    while (attempts > 0){
         if (userInput == randomNumber){
-            alert(winMessage);
-            break;
+            reuslt = winMessage;
         } else if (userInput > randomNumber){
-            userInput = prompt("C'est plus petit que " + userInput + ", essayez plus\n" + "tentatives: " +attempts);
-            attempts--;
+            reuslt = itIsSmall
         } else if (userInput < randomNumber){
-            userInput = prompt("C'est plus grand que " + userInput + ", essayez plus\n" + "tentatives: " +attempts)
-            attempts--;
+            reuslt = itIsBigger
         }
-    }
 
-    if(attempts == 0){
-        alert(lostMessage)
-    }
+        alert(reuslt)
 }
 
-isCorrect()
+isCorrect() 
