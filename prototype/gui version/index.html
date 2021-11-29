@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Devinez quel nombre!!</title>
 </head>
 <body>
-    <div>
-        <h1>Devinez le nombre</h1>
-        <p>Votre tentatives: <span id="tentatives">10</span></p>
-        <p>deviner en un nombre entre 0 et 100</p>
-        <input id="deviner-input" type="text" placeholder="Devinez quel nombre">
-        <button onclick=onSubmit() class="devinez-btn">Devinez</button>
-        <p id="message"></p>
+    <div class="container">
+        <div class="box">
+            <h1>Devinez le nombre</h1>
+            <p class="subtitle">deviner en un nombre entre 1 et 100</p>
+            <input id="deviner-input" type="text" placeholder="Devinez quel nombre">
+            <button onclick=onSubmit() class="btn">Devinez</button>
+            <p id="message"></p>
+        </div>
+      
     </div>
+    <script src="script.js"></script>
+
 </body>
-<script src="script.js"></script>
 </html>
