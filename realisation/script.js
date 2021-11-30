@@ -1,18 +1,23 @@
-var randomNumber = Math.floor(Math.random() * 100);
-console.log(randomNumber)
-var attempts =10;
+var randomNumber;
+var attempts;
 var attempsOutput;
 var winMessage;
 var itIsSmall;
 var itIsBigger;
 
-var lostMessage = "C'est raté !!";
-var tentatives = document.getElementById("tentatives");
-var message = document.getElementById("message")
+var lostMessage;
+var attemptsMessage;
+var message;
 
+
+lostMessage = "C'est raté !!";
+message = document.getElementById("message");
+attemptsMessage = document.getElementById("attemptsMessage");
+randomNumber = Math.floor(Math.random() * 100);
+attempts =10;
 
 function writeattempts () {
-    tentatives.innerHTML = attempts;
+    attemptsMessage.innerHTML = attempts;
     console.log(attempts)
 }
 
@@ -22,7 +27,7 @@ function onSubmit (){
     attempsOutput = 10 - attempts;
 
     if(attempts > 0){
-        var userInput = document.getElementById("deviner-input").value;
+        var userInput = document.getElementById("userInput").value;
         console.log(userInput)
         if(isNaN(userInput) || userInput=== undefined){
             alert("Please Enter a Number!")
@@ -32,7 +37,7 @@ function onSubmit (){
         userInput.value = ""
     } else {
         message.innerHTML = lostMessage
-        tentatives.innerHTML = 0;
+        attemptsMessage.innerHTML = 0;
     }
 }
 
