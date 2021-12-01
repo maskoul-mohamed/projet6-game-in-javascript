@@ -9,9 +9,6 @@
 - [About](https://github.com/maskoul-mohamed/projet6-game-in-javascript#about)
 - [Preview](https://github.com/maskoul-mohamed/projet6-game-in-javascript#preview)
 - [Built with](https://github.com/maskoul-mohamed/projet6-game-in-javascript#built-with)
-- [Installation](https://github.com/maskoul-mohamed/projet6-game-in-javascript#installation)
-    - [Online version](https://github.com/maskoul-mohamed/projet6-game-in-javascript#online-version)
-    - [Local version](https://github.com/maskoul-mohamed/projet6-game-in-javascript#local-version)
 - [Author](https://github.com/maskoul-mohamed/projet6-game-in-javascript#author)
 - [Show your support](https://github.com/maskoul-mohamed/projet6-game-in-javascript#show-your-support)
 
@@ -31,18 +28,6 @@ It is about a simple game which consists in guessing a number between 1 and 100 
 - CSS3;
 - Javascript
 
-
-## Installation
-
-- ### Online version:
-
-Just access this [link](https://maskoul-mohamed.github.io/projet6-game-in-javascript/realisation/)
-
-- ### Local version:
-
-To install a local version of this app, download or clone the project [here](https://github.com/maskoul-mohamed/projet6-game-in-javascript.git)
-
-## Author
 
 :man: **Maskoul Mohamed**
 
