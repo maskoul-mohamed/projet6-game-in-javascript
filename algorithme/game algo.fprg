@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="solicode"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-01 12:31:47 "/>
+        <attribute name="created" value="c29saWNvZGU7REVTS1RPUC01NkkyNjdCOzIwMjEtMTItMDE7IjEwOjAyOjEyICI7MzAwOA=="/>
+        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC01NkkyNjdCOzIwMjEtMTItMDE7IjEyOjMxOjQ3ICI7MjszMTI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="d&#233;claration variable"/>
+            <declare name="randomNumber" type="Integer" array="False" size=""/>
+            <declare name="remainingAttempts" type="Integer" array="False" size=""/>
+            <declare name="winMessage" type="String" array="False" size=""/>
+            <declare name="lostMessage" type="String" array="False" size=""/>
+            <declare name="attemptsMessage" type="String" array="False" size=""/>
+            <declare name="gameOver" type="Boolean" array="False" size=""/>
+            <declare name="message" type="String" array="False" size=""/>
+            <comment text="entrer"/>
+            <assign variable="randomNumber" expression="Random(100)"/>
+            <output expression="randomNumber" newline="True"/>
+            <declare name="userInput" type="Integer" array="False" size=""/>
+            <assign variable="remainingAttempts" expression="10"/>
+            <assign variable="lostMessage" expression="&quot;C'est rat&#233; !!&quot;"/>
+            <assign variable="gameOver" expression="false"/>
+            <while expression="remainingAttempts&gt;0 &amp;&amp; gameOver != true">
+                <output expression="&quot;tentatives: &quot; &amp; remainingAttempts" newline="True"/>
+                <input variable="userInput"/>
+                <assign variable="remainingAttempts" expression="remainingAttempts- 1"/>
+                <if expression="userInput == randomNumber">
+                    <then>
+                        <if expression="remainingAttempts &gt;= 8">
+                            <then>
+                                <assign variable="winMessage" expression="&quot;Bravo, vous etes un G&#233;nie !!!&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="winMessage" expression="&quot;F&#233;licitations, vous avez gagn&#233; apres &quot; &amp; (10 - remainingAttempts)"/>
+                            </else>
+                        </if>
+                        <assign variable="gameOver" expression="true"/>
+                        <assign variable="message" expression="winMessage"/>
+                    </then>
+                    <else>
+                        <if expression="userInput &gt; randomNumber">
+                            <then>
+                                <output expression="&quot;C'est plus petit que &quot; &amp; userInput &amp;&quot;, essayez plus&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;C'est plus grand  que &quot; &amp; userInput &amp; &quot;, essayez plus&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="remainingAttempts == 0">
+                <then>
+                    <assign variable="message" expression="lostMessage"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="message" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
